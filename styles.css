@@ -1,0 +1,57 @@
+/* styles.css — LAST SIGNAL: DEAD ZONE */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #000;
+  font-family: 'Courier New', monospace;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+#gameCanvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: crosshair;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+/* Prevent text selection on canvas interactions */
+canvas:focus {
+  outline: none;
+}
+
+/* Loading state */
+body::before {
+  content: 'Loading LAST SIGNAL: DEAD ZONE...';
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #cc3333;
+  font-family: 'Courier New', monospace;
+  font-size: 18px;
+  z-index: 1000;
+  pointer-events: none;
+  transition: opacity 0.5s;
+}
+
+body.loaded::before {
+  opacity: 0;
+}
+
+/* Scrollbar hidden */
+::-webkit-scrollbar {
+  display: none;
+}
