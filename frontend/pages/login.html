@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Masuk — FINOVA</title>
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/auth.css">
+</head>
+<body>
+<canvas id="particle-canvas" aria-hidden="true"></canvas>
+<a href="/" class="btn btn-ghost btn-sm auth-back">← Beranda</a>
+
+<div class="auth-wrap">
+  <div class="auth-visual">
+    <a href="/" class="brand">FINOVA</a>
+    <div class="quote">Selamat datang kembali di terminal keuanganmu.
+      <small>Tabungan, cicilan, rekening, dan pasar — menunggumu.</small>
+    </div>
+    <div class="footer-note">© 2026 FINOVA · Aman & Independen</div>
+  </div>
+
+  <div class="auth-panel">
+    <div class="auth-card">
+      <a href="/" class="brand">FINOVA</a>
+      <h1>Masuk ke Akunmu</h1>
+      <p class="sub">Gunakan email atau nama pengguna yang terdaftar.</p>
+
+      <div class="form-alert" id="form-alert"></div>
+
+      <form id="login-form" novalidate>
+        <div class="field">
+          <label for="identifier">Email atau Nama Pengguna</label>
+          <input class="input" id="identifier" name="identifier" type="text" autocomplete="username" required placeholder="kamu@email.com">
+          <div class="field-error" data-error="identifier"></div>
+        </div>
+        <div class="field">
+          <label for="password">Kata Sandi</label>
+          <input class="input" id="password" name="password" type="password" autocomplete="current-password" required placeholder="Kata sandimu">
+          <div class="field-error" data-error="password"></div>
+        </div>
+        <button class="btn btn-primary btn-block" type="submit" id="submit-btn">Masuk</button>
+      </form>
+
+      <p class="auth-alt" style="margin-top:14px"><a href="/forgot-password">Lupa kata sandi?</a></p>
+      <p class="auth-alt">Belum punya akun? <a href="/register">Daftar</a></p>
+    </div>
+  </div>
+</div>
+
+<script src="/js/api.js"></script>
+<script src="/js/components.js"></script>
+<script src="/js/particles.js"></script>
+<script src="/js/cursor.js"></script>
+<script src="/js/auth.js"></script>
+</body>
+</html>

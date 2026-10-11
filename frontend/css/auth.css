@@ -1,0 +1,44 @@
+/* FINOVA — gaya halaman autentikasi */
+.auth-wrap {
+  min-height: 100svh; display: grid; grid-template-columns: 1fr 1fr;
+  position: relative; z-index: 1;
+}
+.auth-visual {
+  background:
+    radial-gradient(800px 500px at 20% 30%, rgba(125,211,232,0.07), transparent 60%),
+    var(--metal);
+  border-right: 1px solid var(--border-soft);
+  display: flex; flex-direction: column; justify-content: space-between;
+  padding: 48px;
+  position: relative; overflow: hidden;
+}
+.auth-visual::after {
+  content: ''; position: absolute; inset: 0; background: var(--sheen);
+  animation: sheen 7s ease-in-out infinite; pointer-events: none;
+}
+@keyframes sheen { 0%,60%,100% { transform: translateX(-110%);} 75% { transform: translateX(110%);} }
+.auth-visual .quote { font-size: 22px; font-weight: 700; line-height: 1.35; max-width: 420px; }
+.auth-visual .quote small { display: block; color: var(--text-2); font-weight: 400; font-size: 14px; margin-top: 14px; }
+.auth-visual .footer-note { color: #5c646c; font-size: 12.5px; }
+
+.auth-panel {
+  display: flex; align-items: center; justify-content: center;
+  padding: 48px 24px;
+}
+.auth-card { width: min(430px, 100%); }
+.auth-card h1 { font-size: 26px; margin: 22px 0 4px; }
+.auth-card .sub { color: var(--text-2); font-size: 14px; margin-bottom: 26px; }
+.auth-alt { text-align: center; margin-top: 22px; color: var(--text-2); font-size: 14px; }
+.auth-back { position: absolute; top: 20px; right: 24px; z-index: 2; }
+.form-alert {
+  border-radius: var(--radius-sm); padding: 12px 14px; font-size: 13.5px;
+  margin-bottom: 16px; display: none;
+}
+.form-alert.show { display: block; }
+.form-alert.error { background: rgba(248,113,113,0.1); border: 1px solid rgba(248,113,113,0.35); color: #fca5a5; }
+.form-alert.success { background: rgba(74,222,128,0.08); border: 1px solid rgba(74,222,128,0.3); color: #86efac; }
+
+@media (max-width: 860px) {
+  .auth-wrap { grid-template-columns: 1fr; }
+  .auth-visual { display: none; }
+}

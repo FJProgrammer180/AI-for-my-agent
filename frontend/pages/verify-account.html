@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Verifikasi Akun — FINOVA</title>
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/auth.css">
+</head>
+<body>
+<canvas id="particle-canvas" aria-hidden="true"></canvas>
+
+<div class="auth-wrap">
+  <div class="auth-visual">
+    <a href="/" class="brand">FINOVA</a>
+    <div class="quote">Verifikasi emailmu.
+      <small>Satu langkah kecil untuk keamanan yang lebih besar.</small>
+    </div>
+    <div class="footer-note">© 2026 FINOVA</div>
+  </div>
+
+  <div class="auth-panel">
+    <div class="auth-card">
+      <a href="/" class="brand">FINOVA</a>
+      <h1>Verifikasi Email</h1>
+      <p class="sub">Kami menyertakan tautan verifikasi saat kamu mendaftar. Buka tautan itu, atau tempel kodenya di bawah.</p>
+
+      <div class="form-alert" id="form-alert"></div>
+
+      <form id="verify-form" novalidate>
+        <div class="field">
+          <label for="token">Kode verifikasi</label>
+          <input class="input" id="token" name="token" type="text" autocomplete="one-time-code" placeholder="Tempel kode dari tautan verifikasi">
+          <div class="field-error" data-error="token"></div>
+        </div>
+        <button class="btn btn-primary btn-block" type="submit" id="submit-btn">Verifikasi Akun</button>
+      </form>
+
+      <div style="display:flex;gap:10px;margin-top:14px;flex-wrap:wrap">
+        <button class="btn btn-block" id="btn-resend" type="button">Kirim ulang tautan</button>
+      </div>
+      <div class="field" style="margin-top:12px">
+        <label for="resend-email">Email akunmu</label>
+        <input class="input" id="resend-email" type="email" placeholder="kamu@email.com">
+      </div>
+
+      <p class="auth-alt"><a href="/login">← Kembali masuk</a></p>
+    </div>
+  </div>
+</div>
+
+<script src="/js/api.js"></script>
+<script src="/js/components.js"></script>
+<script src="/js/particles.js"></script>
+<script src="/js/cursor.js"></script>
+<script src="/js/verify.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FINOVA — Aplikasi</title>
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+<canvas id="particle-canvas" aria-hidden="true"></canvas>
+
+<div class="app-shell" id="app-shell">
+  <!-- ===== Sidebar (desktop) ===== -->
+  <aside class="sidebar" id="sidebar">
+    <a href="/dashboard" class="brand" data-link style="padding:4px 0 18px">FINOVA</a>
+    <nav class="side-nav" id="side-nav">
+      <a href="/dashboard" data-link data-nav="dashboard"><span class="nav-ico">◈</span>Dashboard</a>
+      <a href="/savings" data-link data-nav="savings"><span class="nav-ico">◍</span>Tabungan</a>
+      <a href="/interest" data-link data-nav="interest"><span class="nav-ico">％</span>Bunga</a>
+      <a href="/installments" data-link data-nav="installments"><span class="nav-ico">▤</span>Cicilan</a>
+      <a href="/banking" data-link data-nav="banking"><span class="nav-ico">▣</span>Rekening</a>
+      <a href="/transactions" data-link data-nav="transactions"><span class="nav-ico">⇄</span>Transaksi</a>
+      <a href="/analytics" data-link data-nav="analytics"><span class="nav-ico">▥</span>Analitik</a>
+      <a href="/market" data-link data-nav="market"><span class="nav-ico">⌁</span>Pasar</a>
+      <a href="/watchlist" data-link data-nav="watchlist"><span class="nav-ico">★</span>Watchlist</a>
+      <a href="/alerts" data-link data-nav="alerts"><span class="nav-ico">♪</span>Alert Harga</a>
+      <a href="/notifications" data-link data-nav="notifications"><span class="nav-ico">◔</span>Notifikasi</a>
+      <a href="/profile" data-link data-nav="profile"><span class="nav-ico">◯</span>Profil</a>
+      <a href="/security" data-link data-nav="security"><span class="nav-ico">⬡</span>Keamanan</a>
+      <a href="/admin" data-link data-nav="admin" id="nav-admin" hidden><span class="nav-ico">✦</span>Admin</a>
+    </nav>
+    <div class="side-foot">
+      <button class="btn btn-ghost btn-sm btn-block" id="btn-logout">Keluar</button>
+    </div>
+  </aside>
+
+  <!-- ===== Konten ===== -->
+  <div class="app-main">
+    <header class="topbar">
+      <button class="icon-btn" id="btn-menu" aria-label="Menu">☰</button>
+      <div class="topbar-title" id="topbar-title">Dashboard</div>
+      <div class="topbar-right">
+        <a href="/notifications" data-link class="icon-btn" id="notif-btn" aria-label="Notifikasi">
+          ◔<span class="notif-dot" id="notif-dot" hidden></span>
+        </a>
+        <div class="user-chip" id="user-chip">
+          <span class="avatar" id="user-avatar">?</span>
+          <span class="user-name" id="user-name">…</span>
+        </div>
+      </div>
+    </header>
+    <main class="app-content" id="app-content" tabindex="-1">
+      <div class="grid grid-3" style="margin-top:10px">
+        <div class="card"><div class="skeleton" style="width:40%"></div><div class="skeleton" style="width:70%;height:24px;margin-top:12px"></div></div>
+        <div class="card"><div class="skeleton" style="width:50%"></div><div class="skeleton" style="width:65%;height:24px;margin-top:12px"></div></div>
+        <div class="card"><div class="skeleton" style="width:35%"></div><div class="skeleton" style="width:75%;height:24px;margin-top:12px"></div></div>
+      </div>
+    </main>
+  </div>
+
+  <!-- ===== Bottom nav (mobile) ===== -->
+  <nav class="bottom-nav" id="bottom-nav">
+    <a href="/dashboard" data-link data-nav="dashboard"><span>◈</span>Beranda</a>
+    <a href="/savings" data-link data-nav="savings"><span>◍</span>Tabungan</a>
+    <a href="/banking" data-link data-nav="banking"><span>▣</span>Rekening</a>
+    <a href="/market" data-link data-nav="market"><span>⌁</span>Pasar</a>
+    <a href="/profile" data-link data-nav="profile"><span>◯</span>Profil</a>
+  </nav>
+</div>
+
+<div id="greeting-overlay" class="greeting-overlay" hidden>
+  <div class="greeting-card panel">
+    <div class="brand" style="font-size:15px;letter-spacing:.2em">FINOVA</div>
+    <h2 id="greeting-text" style="margin-top:14px"></h2>
+  </div>
+</div>
+
+<script src="/js/api.js"></script>
+<script src="/js/components.js"></script>
+<script src="/js/particles.js"></script>
+<script src="/js/cursor.js"></script>
+<script src="/assets/vendor/lightweight-charts.js"></script>
+<script src="/js/charts.js"></script>
+<script src="/js/realtime.js"></script>
+<script src="/js/app.js"></script>
+<script src="/js/app-pages2.js"></script>
+</body>
+</html>

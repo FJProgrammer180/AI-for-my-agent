@@ -1,0 +1,25 @@
+# Dependensi
+node_modules/
+
+# Rahasia & konfigurasi lokal
+.env
+.env.local
+.env.*.local
+
+# Basis data mode demo (PGlite) — jangan ikut versi git
+.finova-demo-db/
+*.sqlite
+*.wal
+
+# Log & artefak
+*.log
+npm-debug.log*
+coverage/
+.nyc_output/
+
+# Sistem / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp

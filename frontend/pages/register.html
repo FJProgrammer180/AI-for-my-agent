@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daftar — FINOVA</title>
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/auth.css">
+</head>
+<body>
+<canvas id="particle-canvas" aria-hidden="true"></canvas>
+<a href="/" class="btn btn-ghost btn-sm auth-back">← Beranda</a>
+
+<div class="auth-wrap">
+  <div class="auth-visual">
+    <a href="/" class="brand">FINOVA</a>
+    <div class="quote">"Your Money. Your Future. One Intelligent Dashboard."
+      <small>Mulai kelola tabungan, cicilan, rekening, dan portofolio pasarmu dari satu terminal yang elegan.</small>
+    </div>
+    <div class="footer-note">© 2026 FINOVA · Aman & Independen</div>
+  </div>
+
+  <div class="auth-panel">
+    <div class="auth-card">
+      <a href="/" class="brand">FINOVA</a>
+      <h1>Buat Akun Baru</h1>
+      <p class="sub">Beberapa langkah lagi menuju kontrol keuangan penuh.</p>
+
+      <div class="form-alert" id="form-alert"></div>
+
+      <form id="register-form" novalidate>
+        <div class="field">
+          <label for="fullName">Nama Lengkap</label>
+          <input class="input" id="fullName" name="fullName" type="text" autocomplete="name" required maxlength="120" placeholder="Nama sesuai identitas">
+          <div class="field-error" data-error="fullName"></div>
+        </div>
+        <div class="field">
+          <label for="username">Nama Pengguna</label>
+          <input class="input" id="username" name="username" type="text" autocomplete="username" required maxlength="32" placeholder="contoh: arkan_f">
+          <div class="field-error" data-error="username"></div>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input class="input" id="email" name="email" type="email" autocomplete="email" required maxlength="254" placeholder="kamu@email.com">
+          <div class="field-error" data-error="email"></div>
+        </div>
+        <div class="field">
+          <label for="password">Kata Sandi</label>
+          <input class="input" id="password" name="password" type="password" autocomplete="new-password" required maxlength="128" placeholder="Minimal 8 karakter">
+          <div class="password-meter"><span id="meter-bar"></span></div>
+          <div class="password-hint">Gunakan huruf besar, huruf kecil, dan angka.</div>
+          <div class="field-error" data-error="password"></div>
+        </div>
+        <div class="field">
+          <label for="confirmPassword">Konfirmasi Kata Sandi</label>
+          <input class="input" id="confirmPassword" name="confirmPassword" type="password" autocomplete="new-password" required maxlength="128" placeholder="Ulangi kata sandi">
+          <div class="field-error" data-error="confirmPassword"></div>
+        </div>
+        <div class="field checkbox-row">
+          <input type="checkbox" id="acceptTerms" name="acceptTerms">
+          <label for="acceptTerms" style="margin:0">Saya menyetujui <a href="/#keamanan">Syarat Layanan & Kebijakan Privasi</a> FINOVA.</label>
+        </div>
+        <div class="field-error" data-error="acceptTerms"></div>
+        <button class="btn btn-primary btn-block" type="submit" id="submit-btn">Daftar Sekarang</button>
+      </form>
+
+      <p class="auth-alt">Sudah punya akun? <a href="/login">Masuk</a></p>
+    </div>
+  </div>
+</div>
+
+<script src="/js/api.js"></script>
+<script src="/js/components.js"></script>
+<script src="/js/particles.js"></script>
+<script src="/js/cursor.js"></script>
+<script src="/js/auth.js"></script>
+</body>
+</html>
